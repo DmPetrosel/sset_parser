@@ -1,0 +1,42 @@
+# --- Данные и сессии (КРИТИЧЕСКИ ВАЖНО) ---
+# Файлы сессий содержат полный доступ к аккаунтам пользователей
+data/sessions/
+*.session
+*.session-journal
+
+# База данных SQLite
+data/*.db
+data/*.db-journal
+
+# --- Конфигурация и секреты ---
+.env
+config.py
+credentials/
+secrets.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.history/
+
+# --- Docker ---
+.docker/
+# Игнорируем логи контейнеров, если они пишутся в файл
+*.log
+
+# --- Poetry ---
+# Рекомендуется фиксировать lock-файл, но игнорировать кэш
+.pytest_cache/
+.mypy_cache/
+
+# --- Системные файлы ---
+.DS_Store
+Thumbs.db

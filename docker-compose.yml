@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ai_parser:
+    build: .
+    container_name: telegram_ai_parser
+    restart: always
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    # Можно ограничить ресурсы, чтобы один процесс не "съел" весь сервер
+    deploy:
+      resources:
+        limits:
+          memory: 512M
