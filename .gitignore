@@ -13,6 +13,7 @@ data/*.db-journal
 config.py
 credentials/
 secrets.json
+rsync.bash
 
 # --- Python ---
 __pycache__/
